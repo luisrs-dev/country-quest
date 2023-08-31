@@ -9,6 +9,15 @@ Este proyecto es un buscador de países desarrollado con Angular que permite a l
 - Visualización completa de detalles de cada país seleccionado.
 - Interacción con la API de restcountries para obtener datos.
 
+## Capturas de pantalla
+
+![image](https://github.com/luisrs-dev/country-quest/assets/132363133/ebfa1e0c-0252-411a-9722-d711cf00d2e7)
+
+
+![image](https://github.com/luisrs-dev/country-quest/assets/132363133/3fa628fa-8630-4617-846b-726777bc2a8e)
+
+
+
 ## Configuración
 
 Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local:
