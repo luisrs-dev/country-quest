@@ -2,6 +2,7 @@
 type="text"
 class="form-control"
 [placeholder]="placeholder"
+[value]="initialValue"
 (keydown.enter)="emitValue(txtInput.value)"
 (keyup)="onKeyPress(txtInput.value)"
 #txtInput

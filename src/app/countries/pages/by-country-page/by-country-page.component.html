@@ -3,8 +3,10 @@
 <div class="row">
   <div class="col">
     Búsquedas
-   <shared-search-box placeholder="Buscar por país"
-    (onValue)="searchByCountry($event)"
+   <shared-search-box
+    placeholder="Buscar por país"
+    (onDebounce)="searchByCountry($event)"
+    [initialValue]="country"
    ></shared-search-box>
    <!-- (onDeleteListComponent)="onDeleteCharacter($event)" -->
   </div>

@@ -5,6 +5,7 @@
     Búsquedas
    <shared-search-box placeholder="Buscar por capital"
     (onDebounce)="searchByCapital($event)"
+    [initialValue]="capital"
    ></shared-search-box>
    <!-- (onDeleteListComponent)="onDeleteCharacter($event)" -->
   </div>

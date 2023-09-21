@@ -11,8 +11,14 @@ import { Country } from '../../interfaces/country';
 export class ByCountryPageComponent {
 
   countries: Country[] = [];
+  public country: string = '';
 
   constructor(private countriesService: CountriesService) {}
+
+  ngOnInit(){
+    this.countries = this.countriesService.cacheStore.byCountries.countries;
+    this.country = this.countriesService.cacheStore.byCountries.term;
+  }
 
   searchByCountry(term: string) {
     this.countriesService.searchCountry(term).subscribe((countries) => {
