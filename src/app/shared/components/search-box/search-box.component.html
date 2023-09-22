@@ -1,9 +1,12 @@
+<!-- (keyup)="onKeyPress(txtInput.value)" -->
+<!-- (keydown.enter)="emitValue(txtInput.value)" -->
+<!-- (keyup) es una función que se ejecuta cada vez que se escribe una tecla -->
+
 <input
 type="text"
 class="form-control"
 [placeholder]="placeholder"
 [value]="initialValue"
-(keydown.enter)="emitValue(txtInput.value)"
-(keyup)="onKeyPress(txtInput.value)"
+(keyup)="onKeyPress( txtInput.value)"
 #txtInput
 >

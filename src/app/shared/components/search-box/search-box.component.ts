@@ -17,10 +17,8 @@ import { Subject, Subscription, debounceTime } from 'rxjs';
 })
 export class SearchBoxComponent implements OnInit, OnDestroy {
   private debouncer: Subject<string> = new Subject<string>();
+  // Se agrega ? ya que inicialmente la subscripción no existe
   private debouncerSuscription?: Subscription;
-
-  @Output()
-  public onValue = new EventEmitter<string>();
 
   @Output()
   public onDebounce = new EventEmitter<string>();
@@ -35,20 +33,20 @@ export class SearchBoxComponent implements OnInit, OnDestroy {
     this.debouncerSuscription = this.debouncer
       .pipe(debounceTime(1000))
       .subscribe((value) => {
+        console.log('emitiendo value luego de 1 seg');
         this.onDebounce.emit(value);
       });
   }
 
   ngOnDestroy() {
     this.debouncerSuscription?.unsubscribe();
-  }
+    console.log('debouncerSuscription destroy');
 
-  emitValue(value: string): void {
-    console.log({ value });
-    this.onValue.emit(value);
   }
 
   onKeyPress(searchTerm: string) {
+    // (keyup) es una función que se ejecuta cada vez que se escribe una tecla
+    // Luego de escribir en el input, next hace la emisión del observable y le envía el searchTerm
     this.debouncer.next(searchTerm);
   }
 }
