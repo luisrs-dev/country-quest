@@ -1,4 +1,4 @@
-# Buscador de Países con con Angular
+# Buscador de Países con Angular
 
 Este proyecto es un buscador de países desarrollado con Angular que permite a los usuarios buscar países por capital, región y nombre, y ver detalles completos de cada país en la lista de resultados. La aplicación utiliza la API de restcountries para obtener datos sobre los países. A continuación, se detallan las características principales y cómo configurar y ejecutar el proyecto en tu máquina local.
 
